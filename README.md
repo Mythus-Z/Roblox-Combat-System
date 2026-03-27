@@ -1,31 +1,58 @@
-# Roblox Combat System
+# ⚔️ Combat System
 
-Authoritative server-side combat system with combos, hit detection, and status effects.
+[DEMO GIF HERE]
 
-## Features
-- 3-hit sword combo with finisher
-- Box-based hit detection
-- Stun and bleed effects
-- Client-side visual feedback (FOV punch, hit VFX)
+A responsive combat system for Roblox with 3-hit combos, hit detection, and status effects.
 
-## Architecture
-Server handles validation, damage, and effects. Client handles input and visuals.
+---
 
-## Setup
-1. Copy scripts to appropriate locations
-2. Ensure animations/VFX are in ReplicatedStorage/Assets
+## 🎮 What It Looks Like
 
-## Scripts
+[GIF of combat in action]
 
-### Server
-- `CombatService` — Orchestrates combat
-- `ValidationService` — Cooldown/stun checks
-- `WeaponService` — Hit execution
-- `StatusEffectService` — Effect management
-- `HitDetection` — Spatial queries
+**Core features:**
+- 3-hit sword combo — finisher deals heavy damage + stun
+- Hit VFX and screen punch on attack
+- Enemies react with hit animations
+- Status effects (stun, bleed)
 
-### Client
-- `CombatController` — Input handling
-- `AnimationController` — Animation playback
-- `VFXController` — Visual effects
-- `HitReaction` — Victim feedback
+---
+
+## 🏗️ How It Works
+
+**Server handles:** Damage, cooldowns, hit detection, status effects
+**Client handles:** Input, animations, visual feedback
+
+[Simple architecture diagram here]
+
+---
+
+## 📁 Files
+
+| File | What It Does |
+|------|--------------|
+| `CombatController` | Detects clicks, sends attacks to server |
+| `HitDetection` | Finds enemies in weapon hitbox |
+| `StatusEffectService` | Applies stun, bleed over time |
+| `WeaponDefs` | Damage, cooldown, combo settings |
+
+---
+
+## 🚀 Quick Start
+
+1. Copy scripts to:
+   - `ServerScriptService/Combat/`
+   - `StarterPlayerScripts/Combat/`
+   - `ReplicatedStorage/Shared/Definitions/`
+2. Add animations to `ReplicatedStorage/Assets/Animations`
+3. Add VFX to `ReplicatedStorage/Assets/VFX`
+
+---
+
+## 🔧 Customization
+
+**Edit weapon stats in `WeaponDefs.lua`:**
+```lua
+damage = 10,
+attackCooldown = 1,
+comboSteps = { ... }
