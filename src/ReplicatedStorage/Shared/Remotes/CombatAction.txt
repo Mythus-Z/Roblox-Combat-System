@@ -1,2 +1,0 @@
-RemoteEvent 1: "CombatAction" (Client to server)
-RemoteEvent 2: "CombatResult" (Server to all clients)
