@@ -47,7 +47,7 @@ A complete combat system you can drop into any Roblox game.
 
 | Server-Authoritative Cooldown | Note
 |:---------------:|:--------------:|
-| ![Server authoritative Cooldown](https://github.com/user-attachments/assets/1344c7aa-3ae7-4b0b-9f1c-9cae9b164c6b) | Design insight: Two guards are there for validation. First is Client-prediction guard in local context, which is there for avoiding unnecessary operations and responsiveness. Second, and the real guard / validator running on server, immune to exploits. |
+| ![Server authoritative Cooldown](https://github.com/user-attachments/assets/1344c7aa-3ae7-4b0b-9f1c-9cae9b164c6b) | Design insight: Two guards are there for validation. First is Client-prediction guard in local context, which is there for avoiding unnecessary operations and responsiveness. Second, and the real guard/validator running on server, immune to exploits. |
 
 ---
 
@@ -70,10 +70,10 @@ A complete combat system you can drop into any Roblox game.
 
 - **New weapon?** Add one table entry to `WeaponDefs.lua`. No code changes.
 - **New effect?** Write `applyFn` and `removeFn`. Core untouched.
-- **Different character rig?** Change `AttachTo` value. That's it.
+- **Different weapon grip?** Change `AttachTo` value and use appropriate Motor6D joints with the weapon to create custom animations.
 - **Want projectiles?** Swap `HitDetection` module. Everything else works.
 
-**The system adapts to your game. Not the other way around.**
+**The system is designed to be adaptable to most kinds of combat systems. Originally it's inspired by medieval-style combat**
 
 ---
 
