@@ -1,3 +1,4 @@
+-- Local Script
 -- Location: StarterPlayer.StarterPlayerScripts.Combat.CombatController
 -- Purpose: Handles client-prediction and the whole client-side pipeline. 
 
