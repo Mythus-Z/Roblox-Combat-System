@@ -167,7 +167,7 @@ Tool (Name = "Sword")
 
 ### AnimationController Overview
 
-The `AnimationController` manages all character animations on the client using a **slot-based** system. This prevents animation conflicts between movement, attacks, and hit reactions while ensuring smooth transitions.
+The `AnimationController` manages all character animations on the client using a **slot-based** system. This prevents animation conflicts between movement, attacks, and hit reactions while ensuring smooth transitions. It also supports animations for all sort of default movements. 
 
 **Key Features:**
 - Pre-caches all weapon-related animations on equip to avoid runtime `LoadAnimation` calls during combat.
@@ -203,7 +203,7 @@ Sword = {
     }
 }
 ```
-
+```
 ReplicatedStorage.Assets.Animations/
 ├── Sword Idle
 ├── Sword Run
@@ -212,7 +212,7 @@ ReplicatedStorage.Assets.Animations/
 ├── Sword Hit 2
 ├── Sword Finisher
 └── Hit React
-
+```
 
 ---
 
