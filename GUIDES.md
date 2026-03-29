@@ -352,4 +352,4 @@ Each step can override:
 
 - Check **[DEEP_DIVE.md](DEEP_DIVE.md)** for architecture and design decisions
 - Open an issue on GitHub for bugs or feature requests
-- Contact via [Portfolio](your-link)
+- Contact via [Discord](https://discord.com/channels/@me/1068128621190971435)
