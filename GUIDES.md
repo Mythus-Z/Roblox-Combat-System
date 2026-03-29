@@ -165,23 +165,45 @@ Tool (Name = "Sword")
 
 ## Animation Setup
 
-### Location
-Place all animations in `ReplicatedStorage.Assets.Animations`
+### AnimationController Overview
 
-### Naming Convention
-Use the exact names you reference in `WeaponDefs`
+The `AnimationController` manages all character animations on the client using a **slot-based** system. This prevents animation conflicts between movement, attacks, and hit reactions while ensuring smooth transitions.
 
-### Required Animations By Type
+**Key Features:**
+- Pre-caches all weapon-related animations on equip to avoid runtime `LoadAnimation` calls during combat.
+- Uses named **slots** (`Movement`, `Action`, `Reaction`) to allow independent playback and blending.
+- Automatically disables Roblox's default `Animate` script when a weapon is equipped.
+- Restores the default `Animate` script on weapon unequip.
 
-| Type | Purpose | Example Names |
-|------|---------|---------------|
-| **Movement** | Weapon-specific movement | `Idle`, `Run`, `Jump`, `Fall`, `Land` |
-| **Attack** | Per combo step | `Hit 1`, `Hit 2`, `Finisher` |
-| **Reaction** | Hit reaction on victims | `Hit React` |
+### Animation Definition Structure
 
-### Example: Sword Animation Set
+Animations are defined inside `WeaponDefs` under two main tables:
 
+```lua
+Sword = {
+    key = Enum.UserInputType.MouseButton1,
+    
+    animations = {                    -- Movement animations
+        Idle  = "Sword Idle",
+        Run   = "Sword Run",
+        Jump  = "Sword Jump",
+        -- Fall and Land are optional
+    },
+
+    comboSteps = {
+        [1] = { animation = "Sword Hit 1" },
+        [2] = { animation = "Sword Hit 2" },
+        [3] = { 
+            animation = "Sword Finisher",
+            damage = 15,
+            effects = { "Stun" },
+            hitboxSize = Vector3.new(7, 5, 7),
+            hitboxOffset = Vector3.new(0, 0, -5)
+        },
+    }
+}
 ```
+
 ReplicatedStorage.Assets.Animations/
 ├── Sword Idle
 ├── Sword Run
@@ -190,7 +212,7 @@ ReplicatedStorage.Assets.Animations/
 ├── Sword Hit 2
 ├── Sword Finisher
 └── Hit React
-```
+
 
 ---
 
