@@ -7,7 +7,7 @@
 
 local HitDetection = {}
 
-local DEBUG = false
+local DEBUG = false -- Don't show hitBox preview
 
 local Players = game:GetService("Players")
 
