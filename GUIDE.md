@@ -283,7 +283,6 @@ Each step can override:
 | **Animations don't play** | Animation name mismatch | Verify animation names match exactly with config |
 | **Combo doesn't reset** | `resetTimer` missing or too high | Add `resetTimer` to weapon config or lower value |
 | **Stun doesn't lock movement** | Character has no Humanoid | Verify character has a Humanoid |
-| **FOV punch triggers multiple times** | Old version without attackId | Update to version with attackId deduplication |
 | **Server ignores attacks** | Cooldown still active | Wait for `attackCooldown` seconds |
 | **Effects don't apply** | EffectId doesn't exist in StatusEffectDefs | Check spelling matches exactly |
 
