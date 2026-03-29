@@ -1,10 +1,13 @@
 # ⚔️ Combat System
 
 <div align="center">
-  <img src="demo-combo.gif" width="600">
+  <img src="assets/demo-combo.gif" width="600">
   <br>
   <em>A modular, server-authoritative melee combat framework for Roblox</em>
 </div>
+
+
+
 
 <br>
 
@@ -31,15 +34,20 @@ A complete combat system you can drop into any Roblox game.
 
 ---
 
+
 ## 🎬 See It In Action
 
-| Combo System | Hit Detection | Status Effects |
+| Combo System | Visual Feedback | Custom Animations Supported |
 |:------------:|:-------------:|:--------------:|
-| ![Combo](assets/demo-combo.gif) | ![Hit Detection](demo-hitdetection.gif) | ![Status Effects](demo-effects.gif) |
+| ![Combo system](https://github.com/user-attachments/assets/6d705211-ddff-4c1f-95bb-78a8616a945f) |  ![VFX](https://github.com/user-attachments/assets/343642fb-578e-4f35-b1d4-6df3338fc2b3) | ![Custom weapon animations](https://github.com/user-attachments/assets/5e354cd1-c93e-474c-80e6-48d9b6f82c95) |
 
-| Visual Feedback |
-|:---------------:|
-| ![VFX](demo-vfx.gif) |
+ | Hit Detection | Status Effects (Example1) | Status Effect (Example2) | 
+|:------------:|:-------------:|:--------------:|
+| ![Hit Detection](https://github.com/user-attachments/assets/c95ab856-5660-43b0-b8bc-f89f23bc78f4) | ![Status Effects (Example)](https://github.com/user-attachments/assets/c7707459-2ffe-474d-b5ec-52c1c75fbc66) | ![Bleed status effect](https://github.com/user-attachments/assets/835bfa47-9471-47c2-9012-6779a3c12b54)
+
+| Server-Authoritative Cooldown | Note
+|:---------------:|:--------------:|
+| ![Server authoritative Cooldown](https://github.com/user-attachments/assets/1344c7aa-3ae7-4b0b-9f1c-9cae9b164c6b) | Design insight: Two guards are there for validation. First is Client-prediction guard in local context, which is there for avoiding unnecessary operations and responsiveness. Second, and the real guard / validator running on server, immune to exploits. |
 
 ---
 
