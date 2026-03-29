@@ -35,7 +35,7 @@ A complete combat system you can drop into any Roblox game.
 
 | Combo System | Hit Detection | Status Effects |
 |:------------:|:-------------:|:--------------:|
-| ![Combo](demo-combo.gif) | ![Hit Detection](demo-hitdetection.gif) | ![Status Effects](demo-effects.gif) |
+| ![Combo](assets/demo-combo.gif) | ![Hit Detection](demo-hitdetection.gif) | ![Status Effects](demo-effects.gif) |
 
 | Visual Feedback |
 |:---------------:|
