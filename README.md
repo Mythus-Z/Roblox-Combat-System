@@ -45,12 +45,6 @@ Built to be **modular and scalable** — add new mechanics without rewriting cor
 
 ---
 
-## 🚀 Quick Start
-
-### Prerequisites
-- [Roblox Studio](https://www.roblox.com/create) — latest version
-- (Optional) [Rojo](https://rojo.space/) for syncing
-
 ## Quick Start (From Scratch)
 
 1. Copy scripts into your project
