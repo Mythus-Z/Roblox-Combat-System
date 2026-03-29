@@ -21,11 +21,13 @@
 A complete combat system you can drop into any Roblox game.
 
 **You get:**
-- Any melee weapon (swords, axes, fists — configure in one file)
-- Combo system (2-hit, 3-hit, or custom chains)
-- Area hit detection (swing once, hit everything in range)
-- Status effects (stun, bleed, or build your own)
-- Server security (players can't cheat)
+- ✅ Any melee weapon — swords, axes, fists (configure in one file)
+- ✅ Combo system — 2-hit, 3-hit, or custom chains
+- ✅ Area hit detection — swing once, hit everything in range
+- ✅ Status effects — stun, bleed, or build your own
+- ✅ Server security — players can't cheat
+
+**Setup time:** ~15 minutes for first weapon, ~5 minutes for each additional
 
 ---
 
@@ -41,7 +43,33 @@ A complete combat system you can drop into any Roblox game.
 
 ---
 
-## 🚀 Quick Start (From Scratch)
+## ✨ Features
+
+| Feature | What It Does |
+|---------|--------------|
+| **Any Melee Weapon** | Damage, cooldown, hitbox, animations — all configurable per weapon |
+| **Combo System** | Multi-step chains — finishers hit harder |
+| **Area Hit Detection** | Hits everyone in range using box detection |
+| **Status Effects** | Stun (locks movement), Bleed (damage over time) |
+| **Hit VFX** | Particles + light flash on impact |
+| **FOV Punch** | Camera shake on attack — stronger on finishers |
+| **NPC Support** | Tag with `Dummy` for automatic hit detection |
+| **Server Authority** | All damage and validation on server — no cheating |
+
+---
+
+## 🧩 Built to Reuse
+
+- **New weapon?** Add one table entry to `WeaponDefs.lua`. No code changes.
+- **New effect?** Write `applyFn` and `removeFn`. Core untouched.
+- **Different character rig?** Change `AttachTo` value. That's it.
+- **Want projectiles?** Swap `HitDetection` module. Everything else works.
+
+**The system adapts to your game. Not the other way around.**
+
+---
+
+## 🚀 Quick Start
 
 ### 1. Install Scripts
 Copy these folders into your Roblox Studio project:
@@ -90,96 +118,34 @@ Add the `Dummy` tag via CollectionService to any NPCs that should be hittable.
 ### 6. Play
 Equip the tool. Click to attack. Combo works automatically.
 
-> **First time setup:** ~15 minutes. Adding a new weapon: ~5 minutes.
-
 ---
 
-## ✨ Features
-
-| Feature | What It Does |
-|---------|--------------|
-| **Any Melee Weapon** | Configure damage, cooldown, hitbox, animations per weapon |
-| **Combo System** | Multi-step chains — finishers hit harder |
-| **Area Hit Detection** | Hits everyone in range using box detection |
-| **Status Effects** | Stun (locks movement), Bleed (damage over time) |
-| **Hit VFX** | Particles + light flash on impact |
-| **FOV Punch** | Camera shake on attack — stronger on finishers |
-| **NPC Support** | Tag with `Dummy` for automatic hit detection |
-| **Server Authority** | All damage and validation on server — no cheating |
-| **Modular Design** | Add new mechanics without rewriting core systems |
-
----
-
-## ⚙️ Configuration Reference
-
-### Weapon Properties (`WeaponDefs.lua`)
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `key` | Enum | Input key (MouseButton1, etc.) |
-| `attackCooldown` | number | Seconds between attacks |
-| `resetTimer` | number | Seconds before combo resets |
-| `damage` | number | Base damage |
-| `hitboxSize` | Vector3 | Attack area size |
-| `hitboxOffset` | Vector3 | Position relative to character |
-| `animations` | table | Movement animations (Idle, Run, Jump, Fall, Land) |
-| `comboSteps` | table | Attack sequence — each step can override damage, hitbox, effects, cooldown, animation |
-
-### Status Effect Properties (`StatusEffectDefs.lua`)
-
-| Property | Type | Description |
-|----------|------|-------------|
-| `duration` | number | Seconds effect lasts |
-| `applyFn` | function | Called when effect is first applied |
-| `removeFn` | function | Called when effect expires |
-| `tickRate` | number | Seconds between tickFn calls |
-| `tickFn` | function | Called every tickRate (for DoT) |
-| `vfxId` | string | Reference to VFX attachment |
-
-### Tool Requirements
-
-| Requirement | Why |
-|-------------|-----|
-| `Tool.Name` matches weapon ID | System looks up weapon by name |
-| `Handle` part | Motor6D connects to this |
-| `AttachTo` StringValue | Tells system which character part to attach to (e.g., "RightHand", "Back") |
-
----
-
-## 📁 Project Structure
+## 📁 What's Inside
 
 ```
 ReplicatedStorage/
-├── Shared/
-│   ├── Remotes/              # Client-server communication
-│   └── Definitions/          # WeaponDefs.lua, StatusEffectDefs.lua
-└── Assets/
-    ├── Animations/           # Your animation assets
-    └── VFX/                  # Particle attachments
+├── Shared/Definitions/     # Weapon + effect configs (your playground)
+└── Assets/                 # Animations + VFX (your assets)
 
 StarterPlayerScripts/Combat/
-├── CombatController.lua      # Input handling
-├── HitReaction.lua           # Victim feedback
-├── Controllers/              # AnimationController, VFXController
-└── State/                    # Client combo tracking
+├── CombatController.lua    # Input handling
+├── HitReaction.lua         # Victim feedback
+├── Controllers/            # Animation + VFX
+└── State/                  # Client combo tracking
 
 ServerScriptService/Combat/
-├── CombatService.lua         # Main orchestrator
-├── Services/                 # Validation, weapons, effects
-├── State/                    # Server combo tracking
-└── Systems/                  # Hit detection
+├── CombatService.lua       # Main orchestrator
+├── Services/               # Validation, weapons, effects
+├── State/                  # Server combo tracking
+└── Systems/                # Hit detection
 ```
 
 ---
 
-## 🧩 Built to Reuse
+## 📚 More Documentation
 
-| Design Choice | Why It Matters |
-|---------------|----------------|
-| **Data-driven weapons** | New weapon = 5 lines of config |
-| **No hardcoded assets** | Change animations without touching code |
-| **Clean module boundaries** | Add features without breaking combat |
-| **Server owns state** | Client visuals are replaceable — logic stays secure |
+- **[DEEP_DIVE.md](DEEP_DIVE.md)** — Architecture, security model, design decisions
+- **[GUIDES.md](GUIDES.md)** — Weapon config, status effects, setup, API reference
 
 ---
 
@@ -191,10 +157,9 @@ MIT — free to use in your games
 
 ## 🔗 Links
 
-[Portfolio](your-link) • [Live Demo](your-link) • [Report Bug](your-link)
+[Portfolio](your-link) • [Live Demo](your-link)
+
 
 ---
 
----
-
-Ready to copy this into your repo?
+Ready for **Layer 2: DEEP_DIVE.md**?
