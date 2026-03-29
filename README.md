@@ -165,7 +165,7 @@ MIT — free to use in your games
 
 ## 🔗 Links
 
-[Portfolio](your-link) • [Live Demo](your-link)
+[Portfolio](your-link)
 
 
 ---
