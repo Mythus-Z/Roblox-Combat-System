@@ -50,6 +50,6 @@ Built to be **modular and scalable** — add new mechanics without rewriting cor
 1. Copy scripts into your project
 2. Create a Tool in StarterPack named "Sword"
 3. Add a Handle part to the tool
-4. Add StringValue named "AttachTo" → value = "RightHand"
+4. Add StringValue named "AttachTo" → value = "RightHand" (Or a different character part)
 5. Configure weapon stats in `WeaponDefs.lua`
 6. Play
