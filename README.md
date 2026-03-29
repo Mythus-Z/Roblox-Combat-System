@@ -165,7 +165,7 @@ MIT — free to use in your games
 
 ## 🔗 Links
 
-[Portfolio](your-link)
+[Discord](https://discord.com/channels/@me/1068128621190971435)
 
 
 ---
