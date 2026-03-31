@@ -157,17 +157,7 @@ ServerScriptService/Combat/
 
 ---
 
-## 📝 License
-
-MIT — free to use in your games
-
----
-
 ## 🔗 Links
 
 [Discord](https://discord.com/channels/@me/1068128621190971435)
 
-
----
-
-Ready for **Layer 2: DEEP_DIVE.md**?
