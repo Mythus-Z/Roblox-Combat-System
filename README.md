@@ -41,7 +41,7 @@ A complete combat system you can drop into any Roblox game.
 |:------------:|:-------------:|:--------------:|
 | ![Combo system](https://github.com/user-attachments/assets/6d705211-ddff-4c1f-95bb-78a8616a945f) |  ![VFX](https://github.com/user-attachments/assets/343642fb-578e-4f35-b1d4-6df3338fc2b3) | ![Custom weapon animations](https://github.com/user-attachments/assets/5e354cd1-c93e-474c-80e6-48d9b6f82c95) |
 
- | Hit Detection | Status Effects (Example1) | Status Effect (Example2) | 
+ | Hit Detection(Server) | Status Effects (Example1) | Status Effect (Example2) | 
 |:------------:|:-------------:|:--------------:|
 | ![Hit Detection](https://github.com/user-attachments/assets/c95ab856-5660-43b0-b8bc-f89f23bc78f4) | ![Status Effects (Example)](https://github.com/user-attachments/assets/c7707459-2ffe-474d-b5ec-52c1c75fbc66) | ![Bleed status effect](https://github.com/user-attachments/assets/835bfa47-9471-47c2-9012-6779a3c12b54)
 
